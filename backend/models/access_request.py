@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum
+from sqlalchemy.orm import relationship
 from datetime import datetime
-from backend.models import Base
+from . import Base
 import enum
 
 class AccessRequestStatus(str, enum.Enum):
@@ -21,4 +22,7 @@ class AccessRequest(Base):
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     approved_at = Column(DateTime)
     approved_by = Column(String)
-    rejection_reason = Column(String) 
+    rejection_reason = Column(String)
+    
+    # Relationships
+    company = relationship("Company", back_populates="access_requests") 
