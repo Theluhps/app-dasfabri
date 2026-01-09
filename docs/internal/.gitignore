@@ -1,0 +1,10 @@
+# ⚠️ DOCUMENTAÇÃO SIGILOSA - NÃO COMMITAR
+# Este arquivo garante que nada nesta pasta seja commitado no Git
+
+# Ignorar tudo exceto este arquivo
+*
+!.gitignore
+!README.md
+
+# Arquivos específicos que podem ser commitados (se necessário)
+# !architecture/system-overview.md

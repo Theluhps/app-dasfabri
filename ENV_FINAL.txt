@@ -1,0 +1,14 @@
+# EmailJS Configuration
+# Service ID já configurado
+VITE_EMAILJS_SERVICE_ID=service_b356vgs
+
+# Public Key já configurado
+VITE_EMAILJS_PUBLIC_KEY=EigDHTvAsFSxLIw3A
+
+# Template IDs
+# Template ID do "Contato Demonstração"
+VITE_EMAILJS_TEMPLATE_ID_CONTACT=template_0undr9w
+
+# Template ID do "Solicitação de Acesso"
+VITE_EMAILJS_TEMPLATE_ID_ACCESS=template_gmra0qh
+

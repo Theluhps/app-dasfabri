@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dasfabri-api
+    runtime: python
+    buildCommand: |
+      pip install -e .
+      pip install -r requirements.txt
+    startCommand: |
+      export PYTHONPATH=/opt/render/project/src
+      python -m uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+      - key: PORT
+        value: 8000

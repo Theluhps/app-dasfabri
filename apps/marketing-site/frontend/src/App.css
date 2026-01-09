@@ -1,0 +1,76 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-custom {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-16 sm:py-24;
+}
+
+.btn-primary {
+  @apply bg-dasfabri-blue hover:bg-dasfabri-darkBlue text-white font-medium py-2 px-4 rounded-md transition-colors shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-white text-dasfabri-blue border border-dasfabri-blue hover:bg-dasfabri-skyBlue/10 font-medium py-2 px-4 rounded-md transition-colors;
+}
+
+.heading-1 {
+  @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight;
+}
+
+.heading-2 {
+  @apply text-3xl sm:text-4xl font-bold;
+}
+
+.heading-3 {
+  @apply text-2xl font-semibold;
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-white/90 shadow-lg border border-white/20;
+}
+
+.banner {
+  @apply relative overflow-hidden bg-cover bg-center;
+}
+
+.banner-overlay {
+  @apply absolute inset-0 bg-black/30;
+}
+
+.section-divider {
+  @apply w-full h-px my-8 bg-gradient-to-r from-transparent via-dasfabri-blue/20 to-transparent;
+}
+
+/* Animation classes */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-dasfabri-blue/10;
+}
+
+.scale-on-hover {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* Button improvements */
+.button-with-icon {
+  @apply inline-flex items-center gap-2;
+}
+
+/* Card styling */
+.feature-card {
+  @apply bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-dasfabri-blue/30 transition-all duration-300;
+}
+
+/* Backdrop filter for modals */
+.backdrop-blur {
+  @apply backdrop-filter backdrop-blur-md;
+}

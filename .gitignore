@@ -1,7 +1,59 @@
-node_modules/
-venv/
-*.pyc
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Databases
 *.db
+*.sqlite
+*.sqlite3
+
+# Environment
 .env
-Apresentaçoes/ 
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Documentação sigilosa - CRÍTICO: NÃO COMMITAR
+docs/internal/*
+!docs/internal/.gitignore
+!docs/internal/README.md
+
+# Apresentações (opcional - descomente se não quiser commitar)
+# presentations/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasfabri - Acesso Automático</title>
+</head>
+<body>
+    <script>
+        // Criar usuário demo automaticamente
+        const demoUser = {
+            id: 1,
+            name: 'Usuário Demo',
+            email: 'demo@dasfabri.com',
+            role: 'admin',
+            company_id: 1
+        };
+        
+        localStorage.setItem('auth_token', 'demo_token_' + Date.now());
+        localStorage.setItem('user', JSON.stringify(demoUser));
+        
+        // Redirecionar para seleção de módulos
+        window.location.href = '/module-selection';
+    </script>
+    <p>Redirecionando...</p>
+</body>
+</html>
+
