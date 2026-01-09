@@ -70,7 +70,8 @@ git commit -m "$commit_message"
 
 echo ""
 echo "📋 Passo 4: Verificando branch atual..."
-current_branch=$(git branch --show-current)
+# Compatível com versões antigas do git
+current_branch=$(git rev-parse --abbrev-ref HEAD)
 echo "Branch atual: $current_branch"
 
 echo ""
