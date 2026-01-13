@@ -20,6 +20,8 @@ export interface Process {
   referenceNumber?: string;
   customsBroker?: string;
   is_favorite?: boolean;  // Watchlist/Favorites feature
+  documents?: any[];
+  timeline?: any[];
 }
 
 export type ProcessesHookReturn = {
@@ -29,13 +31,14 @@ export type ProcessesHookReturn = {
   currentPage: number;
   itemsPerPage: number;
   setCurrentPage: (page: number) => void;
-  handleSearch: (searchTerm: string, filters: any[]) => void;
+  handleSearch: (searchTerm: string, filters: any[]) => void | Promise<void>;
   handleResetSearch: () => void;
   handleNewProcess: () => void;
   handleEditProcess: (process: Process) => void;
-  handleProcessSubmit: (formData: ProcessFormValues) => void;
+  handleProcessSubmit: (formData: ProcessFormValues) => void | Promise<void>;
   handleExportData: () => void;
   showProcessForm: boolean;
   setShowProcessForm: (show: boolean) => void;
   editingProcess: Process | null;
+  isLoading?: boolean;
 }
