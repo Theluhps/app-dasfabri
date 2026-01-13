@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { TabsContent } from '@/components/ui/tabs';
-import KPICards from './KPICards';
 import ImportDashboard from './ImportDashboard';
 import ImportPerformance from './ImportPerformance';
 import ProcessDeadlinesTabs from './ProcessDeadlinesTabs';
@@ -14,9 +13,6 @@ const ImportDashboardContent: React.FC = () => {
   return (
     <div className="space-y-6 w-full">
       <DashboardTabs activeTab={activeTab} setActiveTab={setActiveTab}>
-        {/* KPI Cards */}
-        <KPICards />
-
         {/* Gráficos */}
         <ImportDashboard />
 
