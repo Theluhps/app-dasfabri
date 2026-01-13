@@ -9,6 +9,7 @@ import BeforeAfter from '@/components/BeforeAfter';
 import Benefits from '@/components/Benefits';
 import Integrations from '@/components/Integrations';
 import CommerceTechVisual from '@/components/CommerceTechVisual';
+import EndToEndFlow from '@/components/EndToEndFlow';
 import About from '@/components/About';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/cta';
@@ -27,6 +28,7 @@ const Index = () => {
         <Benefits />
         <Integrations />
         <CommerceTechVisual />
+        <EndToEndFlow />
         <About />
         <FAQ />
         <CTA />
