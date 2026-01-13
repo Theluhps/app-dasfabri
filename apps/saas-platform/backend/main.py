@@ -85,6 +85,19 @@ app.include_router(public_contact_router, prefix="/api/v1/public", tags=["Contat
 # app.include_router(approvals_router, prefix="/api/v1/approvals", tags=["Aprovações"])
 # app.include_router(analytics_router, prefix="/api/v1/analytics", tags=["Analytics"])
 
+# Rota raiz
+@app.get("/")
+@app.head("/")  # Suporte para HEAD requests
+async def root():
+    """Rota raiz da API"""
+    return {
+        "message": "Dasfabri API",
+        "version": "1.0.0",
+        "status": "online",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 # Rotas de Documentos com OCR
 from app.api.v1.documents import router as documents_router
 app.include_router(documents_router, prefix="/api/v1/documents", tags=["Documentos"])

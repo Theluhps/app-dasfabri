@@ -28,3 +28,12 @@ typing-extensions>=4.5.0
 
 # Logging
 loguru==0.7.0
+
+# OCR (Opcional - descomente se precisar processar documentos com OCR)
+# Pillow>=10.0.0
+# pdf2image>=1.16.0
+# easyocr>=1.7.0
+# pytesseract>=0.3.10
+# 
+# ⚠️ ATENÇÃO: EasyOCR é muito pesado (~500MB) e pode aumentar significativamente o tempo de build
+# Para MVP, você pode deixar sem OCR e adicionar depois quando realmente precisar
