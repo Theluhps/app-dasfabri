@@ -284,24 +284,13 @@ const EndToEndFlow: React.FC<EndToEndFlowProps> = ({
                     opacity="0.3"
                   />
                   {/* Luz animada na conexão */}
-                  <motion.circle
-                    r="1.5"
-                    fill={step.color}
-                    opacity="0.6"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                  >
+                  <circle r="1.5" fill={step.color} opacity="0.6">
                     <animateMotion
                       dur="3s"
                       repeatCount="indefinite"
                       path={generateConnectionPath(entity.position, step.position)}
                     />
-                  </motion.circle>
+                  </circle>
                 </g>
               );
             })
